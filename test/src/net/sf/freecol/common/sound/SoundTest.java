@@ -43,7 +43,7 @@ public class SoundTest extends FreeColTestCase {
         final AudioMixerOption amo = (AudioMixerOption) clientOptions.getOption(ClientOptions.AUDIO_MIXER);
         final PercentageOption po = (PercentageOption) clientOptions.getOption(ClientOptions.AUDIO_VOLUME);
         po.setValue(10); // 10% volume
-        try {
+        try { //Just play the beginning of the sound
             soundPlayer = new SoundPlayer(amo, po);
         } catch (Exception e) {
             fail("Could not construct sound player: " + e.getMessage());
